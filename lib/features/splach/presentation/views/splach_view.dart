@@ -20,16 +20,18 @@ class _SplachViewState extends State<SplachView> {
     super.initState();
   }
 
-  
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: AppColors.primary,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(Assets.imagesSplach,height: 210,),
-            Text(AppStrings.appname,
+            Image.asset(
+              Assets.imagesSplach,
+              height: 210,
+            ),
+            const Text(AppStrings.appname,
                 style: CustomTextStyles.pacifico300style54),
           ],
         ),
@@ -39,7 +41,7 @@ class _SplachViewState extends State<SplachView> {
 }
 
 void delayedNavigatie(context) {
-    Future.delayed(const Duration(seconds: 50), () {
-      customNavigate(context, '/onBoarding');
-    });
-  }
+  Future.delayed(const Duration(seconds: 2), () {
+    customReplacementNavigate(context, '/onBoarding');
+  });
+}
